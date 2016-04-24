@@ -1,4 +1,4 @@
-#ZTTableViewAnimateDemo包含以下四个动画效果
+#CZTableViewAnimateDemo包含以下四个动画效果
 ###**1.tableView Cell 编辑模式**
 删除
 置顶
