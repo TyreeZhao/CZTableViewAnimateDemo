@@ -11,7 +11,7 @@
 		6E61A4251CC6385900B0DED9 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E61A4241CC6385900B0DED9 /* MainTableViewController.swift */; };
 		6E61A4271CC6396400B0DED9 /* EditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E61A4261CC6396400B0DED9 /* EditingViewController.swift */; };
 		6E9DFD4F1CC606D500FA42C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DFD4E1CC606D500FA42C8 /* AppDelegate.swift */; };
-		6E9DFD511CC606D500FA42C8 /* CHlongPressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DFD501CC606D500FA42C8 /* CHlongPressViewController.swift */; };
+		6E9DFD511CC606D500FA42C8 /* CZlongPressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DFD501CC606D500FA42C8 /* CZlongPressViewController.swift */; };
 		6E9DFD541CC606D500FA42C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9DFD521CC606D500FA42C8 /* Main.storyboard */; };
 		6E9DFD561CC606D500FA42C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E9DFD551CC606D500FA42C8 /* Assets.xcassets */; };
 		6E9DFD591CC606D500FA42C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9DFD571CC606D500FA42C8 /* LaunchScreen.storyboard */; };
@@ -25,7 +25,7 @@
 		6E61A4261CC6396400B0DED9 /* EditingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingViewController.swift; sourceTree = "<group>"; };
 		6E9DFD4B1CC606D500FA42C8 /* tableViewMoveCellDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableViewMoveCellDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E9DFD4E1CC606D500FA42C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E9DFD501CC606D500FA42C8 /* CHlongPressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHlongPressViewController.swift; sourceTree = "<group>"; };
+		6E9DFD501CC606D500FA42C8 /* CZlongPressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CZlongPressViewController.swift; sourceTree = "<group>"; };
 		6E9DFD531CC606D500FA42C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E9DFD551CC606D500FA42C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E9DFD581CC606D500FA42C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				6E9DFD4E1CC606D500FA42C8 /* AppDelegate.swift */,
-				6E9DFD501CC606D500FA42C8 /* CHlongPressViewController.swift */,
+				6E9DFD501CC606D500FA42C8 /* CZlongPressViewController.swift */,
 				6E61A4241CC6385900B0DED9 /* MainTableViewController.swift */,
 				6E61A4261CC6396400B0DED9 /* EditingViewController.swift */,
 				6ED23DCE1CC8875B00E15C2E /* PullRefreshViewController.swift */,
@@ -152,7 +152,7 @@
 			files = (
 				0A056AD31CCB45BF0052F201 /* headerViewController.swift in Sources */,
 				6ED23DD11CC888C800E15C2E /* ZTRefreshView.swift in Sources */,
-				6E9DFD511CC606D500FA42C8 /* CHlongPressViewController.swift in Sources */,
+				6E9DFD511CC606D500FA42C8 /* CZlongPressViewController.swift in Sources */,
 				6E61A4271CC6396400B0DED9 /* EditingViewController.swift in Sources */,
 				6E61A4251CC6385900B0DED9 /* MainTableViewController.swift in Sources */,
 				6ED23DCF1CC8875B00E15C2E /* PullRefreshViewController.swift in Sources */,

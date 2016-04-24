@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CHlongPressViewController: UIViewController {
+class CZlongPressViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,20 +19,17 @@ class CHlongPressViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(CHlongPressViewController.longPressGestureRecognized))
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(CZlongPressViewController.longPressGestureRecognized))
         tableView.addGestureRecognizer(longPress)
     }
     
     func longPressGestureRecognized(sender: AnyObject) {
         let longPress = sender as! UILongPressGestureRecognizer
         let state = longPress.state
-        
         let location = longPress.locationInView(tableView)
         let indexPath = tableView.indexPathForRowAtPoint(location)
   
         switch state {
-            
         case UIGestureRecognizerState.Began:
             guard let index = indexPath else { return }
             sourceIndexPath = indexPath
@@ -56,11 +53,10 @@ class CHlongPressViewController: UIViewController {
                 center.y = location.y
                 snapshot.center = center
                 snapshot.transform = CGAffineTransformMakeScale(1.05, 1.05)
-                snapshot.alpha = 0.5
-                
-                cell.alpha = 0
-                cell.backgroundColor = UIColor.purpleColor()
+                snapshot.alpha = 0.80
+                cell.alpha = 1
                 }, completion: { _ in
+                    cell.backgroundColor = UIColor.orangeColor()
 //                    cell.hidden = true
             })
             break
@@ -90,14 +86,15 @@ class CHlongPressViewController: UIViewController {
                 cell.alpha = 1
                 
                 }, completion: { _ in
-                    cell.hidden = false
+//                    cell.hidden = false
+                    cell.backgroundColor = UIColor.whiteColor()
                     snapshot.removeFromSuperview()
             })
         }
     }
 }
 
-extension CHlongPressViewController: UITableViewDelegate, UITableViewDataSource {
+extension CZlongPressViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 64
     }

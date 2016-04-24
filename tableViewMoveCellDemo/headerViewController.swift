@@ -11,6 +11,7 @@ import UIKit
 class headerViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headView: UIView!
 
     @IBOutlet weak var headerViewHeightConstraint: NSLayoutConstraint!
     
@@ -18,6 +19,7 @@ class headerViewController: UIViewController {
     
     let headerHeight: CGFloat = 200
     let menuHeight: CGFloat = 44
+    let naviBarHeight: CGFloat = 64
     var titleLabel = UILabel()
 
     var defaultOffsetY: CGFloat?
@@ -25,6 +27,7 @@ class headerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+        headView.clipsToBounds = true
     }
     
     func setUpView() {
@@ -77,8 +80,8 @@ extension headerViewController: UITableViewDelegate, UITableViewDataSource {
         
         var headerViewHeight: CGFloat = headerHeight - delta
         
-        if headerViewHeight <= 64 {
-            headerViewHeight = 64
+        if headerViewHeight <= naviBarHeight {
+            headerViewHeight = naviBarHeight
         }
         
         headerViewHeightConstraint.constant = headerViewHeight

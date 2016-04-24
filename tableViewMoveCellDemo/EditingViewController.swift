@@ -18,8 +18,6 @@ class EditingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.editing = false
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,21 +62,22 @@ extension EditingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("editingCell") ?? UITableViewCell()
         cell.textLabel?.text = data[indexPath.row] as? String
+        
         let swipGesture = UIPanGestureRecognizer()
         swipGesture.addTarget(self, action: #selector(EditingViewController.editTable))
         return cell
     }
     
-    
+//Mark: Edit Mode
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         let topAction = UITableViewRowAction(style: .Normal, title: "TOP") { (action: UITableViewRowAction, indexPath: NSIndexPath) in
             self.data.exchangeObjectAtIndex(0, withObjectAtIndex: indexPath.row)
             tableView.moveRowAtIndexPath(indexPath, toIndexPath: NSIndexPath(forItem: 0, inSection: 0 ))
-            tableView.editing = !self.isTableEditing
-            self.isTableEditing = !self.isTableEditing
+            tableView.editing = false
+            self.isTableEditing = false
         }
         
-        let collectAction = UITableViewRowAction(style: .Normal, title: "collect") { (action: UITableViewRowAction, indexPath: NSIndexPath) in
+        let collectAction = UITableViewRowAction(style: .Default, title: "collect") { (action: UITableViewRowAction, indexPath: NSIndexPath) in
             
         }
         
@@ -94,11 +93,11 @@ extension EditingViewController: UITableViewDelegate, UITableViewDataSource {
             }
             tableView.endUpdates()
             
-            tableView.editing = !self.isTableEditing
-            self.isTableEditing = !self.isTableEditing
+            tableView.editing = false
+            self.isTableEditing = false
         }
     
-        collectAction.backgroundColor = UIColor.greenColor()
+//        collectAction.backgroundColor = UIColor.init(patternImage: UIImage(named:"2") ?? UIImage())
         return [topAction,deleteAction,collectAction]
     }
     

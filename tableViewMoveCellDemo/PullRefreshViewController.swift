@@ -48,7 +48,7 @@ extension PullRefreshViewController: UITableViewDelegate, UITableViewDataSource{
 
 extension PullRefreshViewController: RefreshDelegate {
     func doRefresh(refreshView: ZTRefreshView) {
-        delay(2) {
+        delay(4) {
             refreshView.endRefresh()
         }
     }
